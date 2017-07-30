@@ -40,10 +40,10 @@ $config = [
             ],
         ],
         'db' => $db,
-
+        'urlManager' => require (__DIR__ . '/router.php')
 //        'urlManager' => [
-//            'enablePrettyUrl' => true,
-//            'showScriptName' => false,
+//            'enablePrettyUrl' => true,//将r参数中的变掉
+//            'showScriptName' => false,//隐藏index.php
 //            'rules' => [],
 ////            'rules' => ["/" => "/default/index"],
 //        ],
