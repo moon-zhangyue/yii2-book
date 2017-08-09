@@ -26,6 +26,16 @@ class UserController extends Controller
      * */
     public function actionCart()
     {
+        $this->layout = false;
+        return $this->render('cart');
+    }
 
+    /*
+     * 我的订单
+     * */
+    public function actionOrder()
+    {
+        $this->layout = false;
+        return $this->render('order');
     }
 }

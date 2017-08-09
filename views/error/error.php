@@ -1,7 +1,5 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Moon
- * Date: 2017/7/30
- * Time: 13:15
- */
+<div class="jumbotron body-content">
+    <div class="jumbotron text-center">
+        <?=$err_msg;?>
+    </div>
+</div>

@@ -1,12 +1,26 @@
-<div class="m-default-index">
-    <h1><?= $this->context->action->uniqueId ?></h1>
-    <p>
-        This is the view content for action "<?= $this->context->action->id ?>".
-        The action belongs to the controller "<?= get_class($this->context) ?>"
-        in the "<?= $this->context->module->id ?>" module.
-    </p>
-    <p>
-        You may customize this page by editing the following file:<br>
-        <code><?= __FILE__ ?></code>
-    </p>
+<div class="shop_header">
+    <i class="shop_icon"></i>
+    <strong></strong>
+</div>
+
+
+<?php if( $image_list ):?>
+    <div id="slideBox" class="slideBox">
+        <div class="bd">
+            <ul>
+                <?php foreach( $image_list as $_image_info ):?>
+                    <li><img style="max-height: 250px;" src="" /></li>
+                <?php endforeach;?>
+            </ul>
+        </div>
+        <div class="hd"><ul></ul></div>
+    </div>
+<?php endif;?>
+<div class="fastway_list_box">
+    <ul class="fastway_list">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
 </div>

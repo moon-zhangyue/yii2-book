@@ -10,6 +10,7 @@ namespace app\controllers;
 use Yii;
 use yii\log\FileTarget;
 use yii\web\Controller;
+use yii\helpers\Html;
 
 
 class ErrorController extends Controller
@@ -19,6 +20,7 @@ class ErrorController extends Controller
      */
     public function actionError()
     {
+        $this->layout = false;
         //记录错误信息到文件和数据库
         $error = \Yii::$app->errorHandler->exception;  //获取错误信息
         $err_msg = '';
@@ -44,7 +46,10 @@ class ErrorController extends Controller
 
             //todo 写入到数据库
         }
-        return '错误页面</br>错误信息:'.$err_msg;
+//        return $this->renderPartial('detail');
+//        $this->layout = false;
+        return $this->render("error",["err_msg" => $err_msg]);
+//        return '错误页面</br>错误信息:'.$err_msg;
     }
 
 }
