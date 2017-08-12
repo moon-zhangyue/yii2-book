@@ -10,15 +10,15 @@ $config = [
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => '123456',
+            'cookieValidationKey' => '66c957a65f4dfc0e6c2699f692ff17cd',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
-        'user' => [
-            'identityClass' => 'app\models\User',
-            'enableAutoLogin' => true,
-        ],
+//        'user' => [
+//            'identityClass' => 'app\models\User',
+//            'enableAutoLogin' => true,
+//        ],
         'errorHandler' => [
 //            'errorAction' => 'site/error',
             'errorAction' => 'error/error', //自定义错误页面
@@ -40,7 +40,7 @@ $config = [
             ],
         ],
         'db' => $db,
-//        'urlManager' => require (__DIR__ . '/router.php')
+//            'urlManager' => require (__DIR__ . '/router.php')
 //        'urlManager' => [
 //            'enablePrettyUrl' => true,//将r参数中的变掉
 //            'showScriptName' => false,//隐藏index.php

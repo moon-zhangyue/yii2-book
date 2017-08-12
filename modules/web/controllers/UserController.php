@@ -11,12 +11,17 @@ use yii\web\Controller;
 
 class UserController extends Controller
 {
+    public function __construct($id, $module, array $config = [])
+    {
+        parent::__construct($id, $module, $config);
+        $this->layout = 'user';
+    }
+
     /*
      * 登录
      * */
     public function actionLogin()
     {
-        $this->layout = false;
         return $this->render('login');
     }
 
@@ -25,7 +30,6 @@ class UserController extends Controller
      * */
     public function actionEdit()
     {
-        $this->layout = false;
         return $this->render('edit');
     }
 
@@ -34,7 +38,6 @@ class UserController extends Controller
      * */
     public function actionResetPwd()
     {
-        $this->layout = false;
         return $this->render('reset_pwd');
     }
 }
